@@ -10,6 +10,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#include "Version.xcconfig"
+
 // Set the default product name.
 PRODUCT_NAME = $(TARGET_NAME)
 
