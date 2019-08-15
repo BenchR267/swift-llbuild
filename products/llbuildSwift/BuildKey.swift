@@ -56,9 +56,12 @@ public class BuildKey: CustomStringConvertible, Equatable, Hashable {
     /// Will only destroy the internalBuildKey on deinit if this is `false`.
     private let weakPointer: Bool
     
+    private var cachedHash: Int!
+    
     fileprivate init(_ buildKey: OpaquePointer, weakPointer: Bool = false) {
         self.internalBuildKey = buildKey
         self.weakPointer = weakPointer
+        self.cachedHash = keyData.hashValue
     }
     
     /// Makes use of APIs easier that use out parameter of type `llb_data_t`.
@@ -111,7 +114,7 @@ public class BuildKey: CustomStringConvertible, Equatable, Hashable {
     }
     
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(keyData)
+        hasher.combine(cachedHash)
     }
     
     deinit {
@@ -121,6 +124,7 @@ public class BuildKey: CustomStringConvertible, Equatable, Hashable {
     
     /// A key used to identify a command.
     public final class Command: BuildKey {
+        
         public convenience init(name: String) {
             self.init(llb_build_key_make_command(name))
         }
