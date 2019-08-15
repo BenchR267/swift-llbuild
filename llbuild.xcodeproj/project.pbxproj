@@ -1718,7 +1718,7 @@
 			path = BuildSystem;
 			sourceTree = "<group>";
 		};
-		B546B39F22C65D2E007046C0 /* Swift */ = {
+		B546B39F22C65D2E007046C0 /* SwiftBinding */ = {
 			isa = PBXGroup;
 			children = (
 				B546B39822C65CFB007046C0 /* Info.plist */,
@@ -1727,7 +1727,9 @@
 				B5BE9BA422E854C600777A06 /* BuildKeyTests.swift */,
 				B5A308C222F30F2000699B4C /* BuildValueTests.swift */,
 			);
-			path = Swift;
+			path = SwiftBinding;
+			sourceTree = "<group>";
+		};
 			sourceTree = "<group>";
 		};
 		BC8DEF0420300AAF00E9EF0C /* llbuildSwift */ = {
@@ -2160,7 +2162,7 @@
 				E1A224B419F998D40059043E /* Core */,
 				9DB0478A1DF9D39E006CDF52 /* BuildSystem */,
 				E1A224B819F998D40059043E /* Ninja */,
-				B546B39F22C65D2E007046C0 /* Swift */,
+				B546B39F22C65D2E007046C0 /* SwiftBinding */,
 				E1A224B319F998D40059043E /* CMakeLists.txt */,
 			);
 			path = unittests;
@@ -4008,7 +4010,7 @@
 		B546B39D22C65CFB007046C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = unittests/Swift/Info.plist;
+				INFOPLIST_FILE = unittests/SwiftBinding/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apple.llbuildSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -4017,7 +4019,7 @@
 		B546B39E22C65CFB007046C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = unittests/Swift/Info.plist;
+				INFOPLIST_FILE = unittests/SwiftBinding/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apple.llbuildSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

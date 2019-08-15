@@ -95,7 +95,7 @@ let package = Package(
         .testTarget(
             name: "llbuildSwiftTests",
             dependencies: ["llbuildSwift"],
-            path: "unittests/Swift"),
+            path: "unittests/SwiftBinding"),
         
         // MARK: GoogleTest
 
